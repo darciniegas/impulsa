@@ -55,6 +55,37 @@ struct PerfilView: View {
                 .font(.subheadline)
                 .foregroundStyle(Color.impOnSurface)
                 .tarjeta()
+                
+ // Información de la aplicación
+ VStack(alignment: .leading, spacing: 12) {
+     Text("Información de la aplicación")
+         .font(.headline)
+         .foregroundStyle(Color.impOnSurface)
+
+     HStack {
+         Image(systemName: "app.fill")
+             .foregroundStyle(Color.impPrimary)
+         Text("Impulsa")
+             .foregroundStyle(Color.impOnSurface)
+         Spacer()
+         Text("Versión 1.0")
+             .font(.caption)
+             .foregroundStyle(Color.impOnSurfaceVariant)
+     }
+
+     Divider()
+
+     Text("Plataforma de gestión y seguimiento de ventas y comisiones.")
+         .font(.subheadline)
+         .foregroundStyle(Color.impOnSurfaceVariant)
+
+     Text("Desarrollado como proyecto académico.")
+         .font(.caption)
+         .foregroundStyle(Color.impOnSurfaceVariant)
+ }
+ .padding(16)
+ .tarjeta()
+
 
                 Button { confirmarSalida = true } label: {
                     HStack(spacing: 8) {
